@@ -1,0 +1,87 @@
+.banner-pl {
+    color: aliceblue;
+    background: url("../images/home.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin: 2%;
+    margin-top: 50px;
+    height: 65vh;
+    transition: all 0.2s ease-out;
+    font-weight: 900;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.banner-pl:hover{
+    transform: scale(1.01);
+}
+
+.blog-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    border: 2px solid rgb(255, 216, 41);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: all .5s ease;
+    margin: 2%;
+  }
+  
+  .image {
+    width: 300px;
+    height: 148px;
+    background: url('../images/love_palestine.jpg') center center/cover;
+  }
+  .save {
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+ 
+  .card_info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 15px;
+    gap: 3px;
+  }
+  
+  .page {
+    font-size: 13px;
+    font-weight: 100;
+  }
+  
+  .title {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+  }
+  
+  .content {
+    font-size: 14px;
+  }
+  
+  .card:hover .image {
+    filter: brightness(.8);
+  }
+  
+  .card:hover{
+    transform: scale(1.03);
+  }
+
