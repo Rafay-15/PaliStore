@@ -3,43 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/donate.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/analytics.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
-    <title>Document</title>
+
+    <title>@yield('title')</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg  fixed-top mainNav">
+    <nav class="navbar navbar-expand-lg  fixed-top mainNav">
         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
             <ul class="navbar-nav topnavs">
                 
-            <li class="nav-item">
-                <a  href="main">Home</a>
-            </li>
-            <li class="nav-item active">
-                <a  href="product">Products</a>
-            </li>
-            <li class="nav-item">
-                <a  href="About">About</a>
-            </li>
-            <li class="nav-item ">
-                <a href="donate">Donations</a>
-            </li>
-            <li class="nav-item ">
-                <a  href="blog">Blog</a>
-            </li>
+                    @yield('pageTitle')
                 
             </ul>
+
+            
+
             <ul class="navbar-nav topnavs justify-content-end">
                     <li class="nav-item">
                         <a  href="#"><img src="images\cart.png" style="height: 25px;" ></a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a  href="#">Cart</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a  href="login">Login</a>
                     </li>
@@ -52,56 +44,18 @@
             </ul>
         </div>
 
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
     </nav>
 
-    <div class="container mt-3">
-    <div class="container-fluid pt-5 mb-5">
-    <div class="logo justify-content-between">
-        <form  action="\product" method="post">
-            @csrf
-            <img src="images/mainlogo.png" style="height:150px"  alt="logo">
-            <input id="searchstore" list="stores" class="form-inline col-sm-12 col-md-8 col-ld-6 py-1" type="search" placeholder="Search in Mart" aria-label="Search">
-            <datalist id="stores">
-            </datalist>
-            <button id="search" type="submit"><a class="search-icon " href="#" ><img class="search" src="images\search.png"  style="height: 35px;"></a></button>
-        </form>
-    </div>
-    </div>
-</div>
-    <div class="row px-xl-5 pb-3">
-    @foreach ($products as $product)
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="card product-item border-0 mb-4 rounded">
-                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                    <img class="img-fluid w-100" src="{{ $product->image_source }}" alt="{{ $product->title }}">
-                </div>
-                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                    <h6 class="text-truncate mb-3">{{ $product->title }}</h6>
-                    <div class="d-flex justify-content-center">
-                        @if (!is_null($product->price))
-                            <h6>${{ $product->price }}</h6>
-                        @else
-                            <h6 class="text-muted">Price not available</h6>
-                        @endif
-                    </div>
-                </div>
-                <div class="card-footer d-flex justify-content-between border">
-                    <a href="{{ $product->link }}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                </div>
-            </div>
-        </div>
-    @endforeach
- </div>
-           
+@yield('content')
 
 <div class="container-fluid foot mt-5 pt-5">
     <div class="row px-xl-5 pt-5">
-        <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+        <div class="col-lg-8 col-md-12 mb-5 pr-3 pr-xl-5">
             <a href="" class="text-decoration-none">
                 <h1 class="mb-4 font-weight-semi-bold">Online Bazaar</h1>
             </a>
@@ -110,7 +64,7 @@
             <p class="mb-2"><i class="fa fa-envelope  mr-3"></i>NonIsreal@store.com</p>
             <p class="mb-0"><i class="fa fa-phone-alt  mr-3"></i>+092 333 333333  </p>
         </div>
-        <div class="col-lg-8 col-md-12">
+        <div class="col-lg-4 col-md-12">
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
@@ -160,6 +114,10 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/product.js"></script>
-</body>
+<script src="js/main.js"></script>
+<script src="js/signupValidation.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/analyticsManage.js"></script>
+{{-- <script src="js/product.js"></script> --}}
 </html>

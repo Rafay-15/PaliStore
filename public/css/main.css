@@ -1,7 +1,7 @@
 body{
     padding-left: 4%;
     padding-right: 4%;
-    padding-top: 140px;
+    padding-top: 100px;
 }
 
 .mainNav{
@@ -45,10 +45,15 @@ body{
 }
 
 
-.searchstore {
+#searchstore {
     border-radius: 20px;
 }
 
+#search{
+    border: none;
+    background-color: transparent;
+    
+}
 
 .gurranty , .gurranty ul{
     border-radius: 20px;

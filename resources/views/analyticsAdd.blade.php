@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/analytics.css">
@@ -30,41 +32,37 @@
             <li class="nav-item">
               <a class="nav-link" href="../main.html">Visit Site</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adminLogout">Logout</a>
+            </li>
           </ul>
         </div>
       </nav>
+      <div class="bodyContainer">
       <div id="mainContainer">
         <div class="mTitle">
             <h3>
                 Add Product
             </h3>
         </div>
-        <div class="mCard">
-            <div style="margin: 1%;">
-                <input type="text" class="txtinput" placeholder="Enter Product ID">
-            <button>Search</button>
-            </div>
-            
+        <div class="formCard">
             <div id="detailContainer">
-                <div class="textarea-container">
-                    <textarea name="prodDetail" id="txtDetails" cols="60" rows="15"></textarea>
-                    <div class="textarea-hint">
-                        Add Product Details in JSON format
-                        e.g:    <br>
-                        {
-                            "productId": "123456", <br>
-                            "productName": "Smartphone",
-                        }
-                    </div>
-                </div>
-                  <label for="fileInput">Add Product Images</label>
-                  <input type="file" name="" id="" accept="image/*">
-                  
-                  <br>
-                <button id="btn">Add Product</button>
+                <form action="/analyticsAdd" method="post" enctype="multipart/form-data">
+                  @csrf
+                    <input type="text" id="title" name="title" placeholder="Enter Product Name">
+                    <input type="text" id="link" name="link" placeholder="Enter Product Link">
+                    <input type="text" id="price" name="price" placeholder="Enter Product Price">
+                    <input type="text" id="desc" name="description" placeholder="Enter Product Description">
+                    <input type="text" id="company" name="company" placeholder="Enter Company Name">
+                    <input type="text" id="image_source" name="image_source" placeholder="Enter Image Source">
+                    <br>
+                   <button type="submit">Add Product</button>
+                </form>
+                
             </div>
         </div>
       </div>
-    
+      </div>
+      
 </body>
 </html>

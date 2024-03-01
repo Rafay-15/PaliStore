@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/analytics.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Murder-Free Store</a>
@@ -30,19 +32,22 @@
             <li class="nav-item">
               <a class="nav-link" href="../main.html">Visit Site</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adminLogout">Logout</a>
+            </li>
           </ul>
         </div>
       </nav>
-      <div id="mainContainer">
+      <div class="bodyContainer"><div id="mainContainer">
         <div class="mTitle">
             <h3>
                 Delete Products!
             </h3>
         </div>
-        <div class="mCard">
+        <div class="formCard">
             <div style="margin: 1%;">
-                <input type="text" placeholder="Enter Product ID">
-            <button>Search</button>
+                <input id="searchInput" type="text" placeholder="Enter Product ID">
+            <button id="Searchbtn">Search</button>
             </div>
             
             <div id="detailContainer">
@@ -61,10 +66,10 @@
                   </textarea>
                   
                   <br>
-                <button id="btn">Delete Product</button>
+                <button id="delbtn">Delete Product</button>
             </div>
         </div>
-      </div>
-    
+      </div></div>
+      <script src="js/analyticsManage.js"></script>
 </body>
 </html>

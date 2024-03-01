@@ -4,77 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signup.css">
     <title>Sign Up Page</title>
-    <style>
-        body {
-            background-color: #f8f9fa;
-            color: #353535;
-        }
-
-        .container {
-            max-width: 400px;
-            margin-top: 50px;
-        }
-
-        .card {
-            border: none;
-            background-color: #353535;
-            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-header {
-            background-color: #353535;
-            color: #353535;
-            text-align: center;
-        }
-
-        .card-header img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        h4.login {
-            color: #f8f9fa;
-            margin-bottom: 20px;
-        }
-
-        .form-control {
-            background-color: #353535;
-            color: #f8f9fa;
-            border: 1px solid #f8f9fa;
-        }
-
-        .btn {
-            background-color: #2ecc71;
-            border: none;
-            color: #f8f9fa;
-        }
-
-        .btn a {
-            color: #f8f9fa;
-            text-decoration: none;
-        }
-
-        .footer-text a {
-            color: #f8f9fa;
-            text-decoration: none;
-        }
-
-        .text-center a {
-            color: #2ecc71;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        .mt-3 a{
-            color: #f8f9fa;
-        }
-
-    </style>
+    
 </head>
 <body>
     <div class="container">
@@ -84,30 +16,28 @@
             </div>
             <div class="card-body">
                 <h4 class="text-center mb-4">Sign Up to Your Account</h4>
-                <form action="#">
+                <form action="signup" method="POST">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        <input type="text" class="form-control " id="name" placeholder="Name" name="name" required>
+                        <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
                     </div>
+                   
                     <div class="form-group">
-                        <input type="text" class="form-control" id="phone" placeholder="Phone" required>
+                        <input type="text" class="form-control" id="cnic" placeholder="Cnic" name="cnic" required>
+                        <input type="text" class="form-control" id="address" placeholder="Address" name="address" required>
                     </div>
+                    
                     <div class="form-group">
-                        <input type="text" class="form-control" id="cnic" placeholder="Cnic" required>
+                        <input type="email" class="form-control" id="email" placeholder="Email address" name="email" required>
+                         <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="address" placeholder="Address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
-                    </div>
-                    <button type="submit" id="signup" class="btn  btn-block">Sign Up</button>
-                    <button type="submit" class="btn btn-block">
-                        <a href="login.html">Login</a></button>
-                    <div class="text-center  mt-3">
-                        <a href="../main.html">Back to Main</a>
+                  
+                   <button type="submit" class="btn  btn-block" id="sign"><a href="signup" id="signA">Sign Up</a></button>
+                    <button  class="btn btn-block" id="log"><a href="login" >Login ?</a></button>
+                   
+                    <div class="text-center  mt-2">
+                        <a href="main">Back to Main</a>
                     </div>
                 </form>
                 

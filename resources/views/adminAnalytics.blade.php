@@ -22,36 +22,84 @@
               <a class="nav-link" href="#">Analytics <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="analyticsManage.html">Update Products </span></a>
+              <a class="nav-link" href="analyticsManage">Update Products </span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="analyticsAdd.html">Add Product</a>
+              <a class="nav-link" href="analyticsAdd">Add Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="analyticDelete.html">Delete Product</a>
+              <a class="nav-link" href="analyticDelete">Delete Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../main.html">Visit Site</a>
+              <a class="nav-link" href="main">Visit Site</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adminLogout">Logout</a>
             </li>
           </ul>
         </div>
       </nav>
+      <div class="bodyContainer">
       <div id="mainContainer">
-        <div class="card flexContainer ">
+      <div class="card flexContainer">
+            <div id="curve_chart"></div>
+      </div>
+      </div>
+      <div class="mainContainer">
+        <!-- <div class="card flexContainer">
           <div id="chart-container"></div>
         </div>
         <div class="rowflexContainer">
           <div class="card flexContainer halfContainer">
-            <div id="piechart_3d" ></div>
+            <div id="piechart_3d"></div>
           </div>
           <div class="card flexContainer halfContainer">
             <div id="curve_chart"></div>
           </div>
+        </div> -->
+        <div class="rowflexContainer ">
+        <div class="formCard flexContainer">
+          <div id="totalWebsiteViews" class="txtinput mTitle ">
+            <h3>Total Website Views</h3>
+            <p id="wViews"><?php echo $totalViews; ?></p>
+          </div>
         </div>
         
-      </div>
+        <div class="formCard flexContainer">
+          <div id="currentSignedUpUsers" class="txtinput mTitle">
+            <h3>Current Signed Up Users</h3>
+            <p id="wViews"><?php echo $totalUsers; ?></p>
 
+          </div>
+        </div>
+        <div class="formCard flexContainer">
+          <div id="tProducts" class="txtinput mTitle">
+            <h3> Total Products On Site</h3>
+            <p id="wViews"><?php echo $totalProducts; ?></p>
+
+          </div>
+        </div>
+        <div class="formCard flexContainer">
+          <div id="currentSignedUpUsers" class="txtinput mTitle">
+            <h3>Punjab Cash And Carry Products</h3>
+            <p id="wViews"><?php echo $pccProd; ?></p>
+
+          </div>
+        </div>
+        <div class="formCard flexContainer">
+          <div id="currentSignedUpUsers" class="txtinput mTitle">
+            <h3>Carre Four Products</h3>
+            <p id="wViews"><?php echo $cfProd; ?></p>
+
+          </div>
+        </div>
+      </div>
+        
+        </div>
+      </div>
       
-    
+        
+        
+        
 </body>
 </html>
