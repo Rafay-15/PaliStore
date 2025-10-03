@@ -32,14 +32,14 @@ The project features a robust backend with distinct functionalities:
 
 ## Key Features
 
-  * [cite\_start]**Automated Product Scraping:** Utilizes Laravel Dusk to automatically gather product data from e-commerce sites like Punjab Cash and Carry[cite: 2180].
-  * [cite\_start]**Ethical Brand Filtering:** Excludes specified brands (e.g., Nestle, Pepsi) during the scraping process[cite: 2183].
-  * [cite\_start]**Automated News Scraping:** Scrapes live news content from Al Jazeera to populate the blog section[cite: 2156].
-  * [cite\_start]**Admin Analytics Dashboard:** Provides administrators with key metrics, including total site views, user sign-ups, and product counts broken down by source[cite: 13, 14, 17, 18, 19, 23].
-  * [cite\_start]**Full Product Management:** Admin interface for Creating, Reading, Updating, and Deleting products in the database[cite: 2014, 2022, 2004].
-  * [cite\_start]**User Authentication:** Standard registration and login system for users[cite: 64, 69].
-  * [cite\_start]**Visit Tracking:** Logs visitor IP addresses to track site views[cite: 77, 78].
-  * [cite\_start]**RESTful API for Data:** Includes API endpoints for fetching data for analytics charts and product searches[cite: 2153, 2154].
+  * **Automated Product Scraping:** Utilizes Laravel Dusk to automatically gather product data from e-commerce sites like Punjab Cash and Carry[cite: 2180].
+  * **Ethical Brand Filtering:** Excludes specified brands (e.g., Nestle, Pepsi) during the scraping process[cite: 2183].
+  * **Automated News Scraping:** Scrapes live news content from Al Jazeera to populate the blog section[cite: 2156].
+  * **Admin Analytics Dashboard:** Provides administrators with key metrics, including total site views, user sign-ups, and product counts broken down by source[cite: 13, 14, 17, 18, 19, 23].
+  * **Full Product Management:** Admin interface for Creating, Reading, Updating, and Deleting products in the database[cite: 2014, 2022, 2004].
+  * **User Authentication:** Standard registration and login system for users[cite: 64, 69].
+  * **Visit Tracking:** Logs visitor IP addresses to track site views[cite: 77, 78].
+  * **RESTful API for Data:** Includes API endpoints for fetching data for analytics charts and product searches[cite: 2153, 2154].
 
 ## Technology Stack
 
@@ -57,7 +57,7 @@ Follow these instructions to get a local copy of the project up and running for 
 
 Ensure you have the following installed on your system:
 
-  * [cite\_start]PHP (version `^8.1` recommended) [cite: 177]
+  * PHP (version `^8.1` recommended) [cite: 177]
   * Composer
   * Node.js & NPM
   * A database server (e.g., MySQL)
@@ -156,8 +156,8 @@ The admin panel provides analytics and database management tools.
   * **Access:** Navigate to `/admin` in your browser.
   * **Login:** Use the credentials for a user in the `admin` table. You may need to create one manually or build a seeder.
   * **Features:**
-      * [cite\_start]View site analytics, including charts for visitor traffic[cite: 1979].
-      * [cite\_start]Manage products: Add, update, and delete product listings[cite: 1980, 1981, 1982].
+      * View site analytics, including charts for visitor traffic[cite: 1979].
+      * Manage products: Add, update, and delete product listings[cite: 1980, 1981, 1982].
 
 ## Testing
 
